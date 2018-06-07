@@ -9,7 +9,7 @@ pipeline {
                 script {
                     def antVersion = 'Ant1.10.3'
                     withEnv( ["ANT_HOME=${tool antVersion}"] ) {
-                        bat '%ANT_HOME%/bin/ant.bat clean'
+                        bat '%ANT_HOME%\\bin\\ant.bat clean'
                     }
                 }
             }
