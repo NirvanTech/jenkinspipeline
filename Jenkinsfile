@@ -6,10 +6,11 @@ pipeline {
             steps {
                 echo 'Building..'
                 checkout scm
-
-                def antVersion = 'Ant1.10.3'
-                withEnv( ["ANT_HOME=${tool antVersion}"] ) {
-                    bat '%ANT_HOME%/bin/ant.bat clean'
+                script {
+                    def antVersion = 'Ant1.10.3'
+                    withEnv( ["ANT_HOME=${tool antVersion}"] ) {
+                        bat '%ANT_HOME%/bin/ant.bat clean'
+                    }
                 }
             }
         }
