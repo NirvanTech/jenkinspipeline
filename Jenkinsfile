@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                checkout scm
+               // checkout scm
                 withAnt(installation: 'Ant1.10.3') {
                     bat "ant clean"
                 }
